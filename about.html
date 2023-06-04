@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1"></div>
+                    <img src="./portfolio pic.jpeg">
+                <div class="about-col-2"></div>
+                    <h1 class="sub-title">About Me</h1>
+                    <p>My name is Aryasree and I am currently pursuing my graduation 
+                        in bvrit hyderabad college of engineering for women.I am a 
+                        computer science and engineering student. I have learnt some 
+                        of the programming lanuages like C,C++,Java,python,html,css.
+                        I have sucessfully completed three semesters.I am more interseted 
+                        in doing summer internships.I am fond of knowing new things 
+                        and exploring diffenret worlds of programming.I am mostly 
+                        indulged in analysis of issues.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+    
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming languages</span><br>C <span></span>
+                            c++
+                            Java
+                            python
+                            html
+                            css</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Wise project</span><br>2 months</li>
+                            <li><span>tata ESG Virtual internship</span><br>1 month</li>
+                           
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>10th</span><br>93%</li>
+                            <li><span>Intermediate</span><br>95%</li>
+                            <li><span>Engineering</span><br>84%</li>
+                        </ul>
+                    </div>
+            </div>
+    
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+    
+        }
+    </script>
+    
+</body>
+</html>
